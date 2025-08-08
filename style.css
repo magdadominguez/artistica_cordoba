@@ -4,9 +4,22 @@
     justify-content: space-between;
 }
 .titulo1{
-    font-size: 4em;
+    font-size: 5em;
     font-family: "Italiana", sans-serif;
+    margin-right: 5em;
+    margin-left: 50px;
 }
+.buscador{
+    border-color: #DEC693;
+    border-radius: 15px;
+    width:10cm;
+    height: 30px;
+    margin-left: 50px;
+    background-size: 20px 20px; 
+  padding-left: 25px;
+  background-image: "imagenes/buscador.svg";
+}
+
 .texto-navbar2{
     color: black;
     text-decoration: none;
@@ -36,7 +49,6 @@ footer{
     background-color: #DEC693;
     border-radius: 15px;
     padding: 20px;
-
 }
 .acuarela-product {
  display: grid;
@@ -69,4 +81,70 @@ footer{
 .titulos-paginas {
     font-family: "Italiana", sans-serif;
     text-align: center;
+}
+.flechas {
+    width: 30px;
+}
+.boton-flecha {
+    width: 50px;
+    height: 50px;
+    border: unset;
+    background-color: unset;
+}
+.productos-elegidos {
+    background-color: #DEC693;
+    display: flex;
+    padding: 15px;
+    font-family: "Figtree", sans-serif;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+.lupa {
+    margin-left: -33px;
+    height: 21px;
+}
+.contenedor-buscador {
+    align-items: center;
+    display: flex;
+}
+.sugerencias-incio {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #DEC693;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 50px;
+    width: 40%;
+    position: absolute;
+    top: 15%;
+    right: 3%;
+}
+.sugerencias-incio img {
+ width: 90%;
+ height: 90%;
+}
+.sugerencias-incio h2{
+    padding: auto;
+    margin: auto;
+    font-size: 50px;
+}
+.col-izq {
+    position: relative;
+}
+.titulo-carrito {
+    font-family: "Figtree", sans-serif;
+}
+.mancha {
+width: 80px;
+}
+.boton-pagar{
+    background-color: #C5D8D1;
+    padding: 10px;
+    border: unset;
+    margin: 0px 20px 20px 50px;
+    width: 15%;
+
 }
