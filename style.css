@@ -12,7 +12,7 @@
 .buscador{
     border-color: #DEC693;
     border-radius: 15px;
-    width:10cm;
+    width: 25%;
     height: 30px;
     margin-left: 50px;
     background-size: 20px 20px; 
@@ -30,7 +30,7 @@
 }
 header{
     background-color: #C5D8D1;
-    padding: 15px;
+    padding: 10px;
 }
 body{ 
     background-color: #FFF2D5;
@@ -39,16 +39,28 @@ body{
 footer{
     background-color: #C5D8D1;
     text-align: right;
+    justify-content: space-between;
+    padding: 10px;
+}
+footer img {
+    margin: 2.5px;
 }
 .titulos { 
     font-family: "Italiana", sans-serif;
-    margin-left: 40px;
+    margin-left: 60px;
+    margin-top: 40px;
 }
 .card {
     font-family: "Figtree", sans-serif;
     background-color: #DEC693;
     border-radius: 15px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.card h3 {
+    margin: 8px;
 }
 .acuarela-product {
  display: grid;
@@ -83,24 +95,29 @@ footer{
     text-align: center;
 }
 .flechas {
-    width: 30px;
+    width: 45px;
 }
 .boton-flecha {
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border: unset;
     background-color: unset;
+    margin: auto;
 }
 .productos-elegidos {
     background-color: #DEC693;
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 80%;
     padding: 15px;
     font-family: "Figtree", sans-serif;
     border-radius: 10px;
     margin-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
+}
+.productos-elegidos img {
+    border-radius: 15px;
 }
 .lupa {
     margin-left: -33px;
@@ -137,14 +154,54 @@ footer{
 .titulo-carrito {
     font-family: "Figtree", sans-serif;
 }
-.mancha {
-width: 80px;
-}
 .boton-pagar{
     background-color: #C5D8D1;
     padding: 10px;
     border: unset;
     margin: 0px 20px 20px 50px;
     width: 15%;
-
+    display: block;
+    margin-left: auto;
+    margin-right: 50px;
+}
+.producto-detalle {
+    font-family: "Figtree", sans-serif;
+    background-color: #DEC693;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 4%
+}
+.producto-detalle img {
+    width: 100%;
+    border-radius: 15px;
+}
+.texto-detalle {
+    margin-left: 40px;
+}
+.agregar-carrito {
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 35%;
+}
+.titulos-productos {
+    font-family: "Italiana", sans-serif;
+    margin-left: 15%;
+}
+.boton-agregar{
+    background-color: unset;
+    border: unset;
+    font-family: "Figtree", sans-serif;
+    align-self: flex-end;
+    margin: 0px
+}
+.sucursales {
+  display: grid;
+  grid-template-columns: repeat auto-fit, minmax 300px, 1fr;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Figtree", sans-serif;
 }
