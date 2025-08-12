@@ -13,12 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'> 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="funciones.js"></script>
+
 </head>
-<body>
+<body onload="mostrarProductos()">
 
     <header>
         <div class="elementos-navbar">
@@ -33,135 +35,10 @@
 
     <main class="productos">
         <h1 class="titulos-paginas">Productos</h1>
-        <div>
-            <h2 class="titulos-productos">Acuarelas</h2>
-
-            <section class="acuarela-product">
-
-            <button type="button" class="boton-flecha"><img src="imagenes/flecha izquierda.png" alt="flecha" class="flechas" ></button>
+        <div id="listado-productos">
             
-            <div class="card"> 
-                <a href="detalle producto.html"><img src="imagenes/acuarela sugerencia.png" alt="acuarela 1"></a>
-                    <h3>Nombre</h3> 
-                    <h3>Precio</h3>
-                <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div> 
-            <div class="card">
-                <a href="detalle producto.html"><img src="imagenes/acuarela sugerencia.png" alt="acuarela 2"></a>    
-                    <h3>Nombre</h3> 
-                    <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/acuarela sugerencia.png" alt="acuarela 3"></a>             
-                <h3>Nombre</h3> 
-                 <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <button type="button" class="boton-flecha"><img src="imagenes/flecha derecha.svg" alt="flecha" class="flechas" ></button>
-            </section>
         </div>
-        <div>
-            <h2 class="titulos-productos">Oleos</h2>
-            
-            <section class="oleo-product">
-           <button type="button" class="boton-flecha"><img src="imagenes/flecha izquierda.png" alt="flecha" class="flechas" ></button>
-            <div class="card">
-                <a href="detalle producto.html"><img src="imagenes/oleo sugerencia.png" alt="oleo 1"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-                  <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-             <div class="card">
-             <a href="detalle producto.html"><img src="imagenes/oleo sugerencia.png" alt="oleo 2"></a>           
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/oleo sugerencia.png" alt="oleo 3"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-            <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <button type="button" class="boton-flecha"><img src="imagenes/flecha derecha.svg" alt="flecha" class="flechas" ></button>
-            </section>
-        </div>
-       <div>
-        <h2 class="titulos-productos">Acrilicos</h2>
-            <section class="acrilico-product">
-            <button type="button" class="boton-flecha"><img src="imagenes/flecha izquierda.png" alt="flecha" class="flechas" ></button>
-             <div class="card">
-           <a href="detalle producto.html"><img src="imagenes/acrilicos.png" alt="acrilico 1"></a>           
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/acrilicos.png" alt="acrilico 2"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-             <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/acrilicos.png" alt="acrilico 3"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <button type="button" class="boton-flecha"><img src="imagenes/flecha derecha.svg" alt="flecha" class="flechas" ></button>
-            </section>
-       </div>
-       <div>
-        <h2 class="titulos-productos">Papeles</h2>
-            <section class="papeles-product">
-            <button type="button"class="boton-flecha"><img src="imagenes/flecha izquierda.png" alt="flecha" class="flechas" ></button>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/papeles.png" alt="papeles 1"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/papeles.png" alt="papeles 2"></a>           
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-            <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/papeles.png" alt="papeles 3"></a>           
-            <h3>Nombre</h3>
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div> 
-            <button type="button"class="boton-flecha"><img src="imagenes/flecha derecha.svg" alt="flecha" class="flechas" ></button>
-            </section>
-       </div>
-       <div>
-        <h2 class="titulos-productos">Pinceles</h2>
-                <section class="pinceles-product">
-            <button type="button"class="boton-flecha"><img src="imagenes/flecha izquierda.png" alt="flecha" class="flechas" ></button>
-            <div class="card">
-           <a href="detalle producto.html"><img src="imagenes/pincel grande.png" alt="pincel 1"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-            <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-           <div class="card">
-           <a href="detalle producto.html"><img src="imagenes/pincel grande.png" alt="pincel 2"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <div class="card">
-            <a href="detalle producto.html"><img src="imagenes/pincel grande.png" alt="pincel 3"></a>            
-            <h3>Nombre</h3> 
-            <h3>Precio</h3>
-             <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
-            </div>
-            <button type="button"class="boton-flecha"><img src="imagenes/flecha derecha.svg" alt="flecha" class="flechas" ></button>
-            </section>
-       </div>
+        
     </main>
     <h1></h1>
 

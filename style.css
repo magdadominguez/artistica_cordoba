@@ -16,8 +16,7 @@
     height: 30px;
     margin-left: 50px;
     background-size: 20px 20px; 
-  padding-left: 25px;
-  background-image: "imagenes/buscador.svg";
+    padding-left: 25px;
 }
 
 .texto-navbar2{
@@ -55,40 +54,25 @@ footer img {
     background-color: #DEC693;
     border-radius: 15px;
     padding: 20px;
-    display: flex;
+
     flex-direction: column;
     justify-content: flex-start;
+    margin: 20px
 }
 .card h3 {
     margin: 8px;
 }
-.acuarela-product {
+.catalogo {
  display: grid;
- grid-template-columns: 10% 20% 20% 20% 10%;
+ grid-template-columns: 33% 33% 34%;
  justify-content: space-between;
+ padding-left: 10%;
+ padding-right: 10%;
 }
-.oleo-product {
- display: grid;
- grid-template-columns: 10% 20% 20% 20% 10%;
- justify-content: space-between;
-}
-.acrilico-product {
- display: grid;
- grid-template-columns: 10% 20% 20% 20% 10%;
- justify-content: space-between;
-}
-.papeles-product {
- display: grid;
- grid-template-columns: 10% 20% 20% 20% 10%;
- justify-content: space-between;
-}
-.pinceles-product {
- display: grid;
- grid-template-columns: 10% 20% 20% 20% 10%;
- justify-content: space-between;
-}
+
 .card img {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 .titulos-paginas {
     font-family: "Italiana", sans-serif;
@@ -187,7 +171,7 @@ footer img {
 }
 .titulos-productos {
     font-family: "Italiana", sans-serif;
-    margin-left: 15%;
+    margin-left: 12%;
 }
 .boton-agregar{
     background-color: unset;
@@ -204,4 +188,10 @@ footer img {
   max-width: 1200px;
   margin: auto;
   font-family: "Figtree", sans-serif;
+}
+.boton-detalle {
+    background-color: unset;
+    border: unset;
+    font-family: "Figtree", sans-serif;
+    margin: 0px
 }
