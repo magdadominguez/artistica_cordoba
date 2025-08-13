@@ -20,7 +20,7 @@
     <script type="text/javascript" src="funciones.js"></script>
 
 </head>
-<body>
+<body onload="mostrarCarrito()">
     <header>
         <div class="elementos-navbar">
            <div> 
@@ -33,27 +33,12 @@
     </header>
     <main>
         <h1 class="titulos">Productos Elegidos</h1>
-        <div class="productos-elegidos">
-            <div><img src="imagenes/acuarela sugerencia.png" alt="acuarela carrito"></div>
-        <div>
-            <h3>Nombre del producto</h3>
-            <h3>Precio</h3>
-        </div>
-        </div>
-         <div class="productos-elegidos">
-            <div><img src="imagenes/acuarela sugerencia.png" alt="acuarela carrito"></div>
-            <div>
-            <h3>Nombre del producto</h3>
-            <h3>Precio</h3>
-             </div>
-        </div>
-         <div class="productos-elegidos">
-            <div><img src="imagenes/acuarela sugerencia.png" alt="acuarela carrito"></div>
-            <div>
-                <h3>Nombre del producto</h3>
-                <h3>Precio</h3>
-            </div>
-        </div>
+        <button class="boton-pagar" type="button" onclick="limpiarCarrito()"><p class="titulo-carrito">Limpiar carrito</p></button>
+        <section id="listado-carrito"> 
+            <div class="producto-detalle">
+    <p>No hay productos en el carrito.</p>
+    </div></section>
+       
         <div> <button class="boton-pagar" type="button"><p class="titulo-carrito">PAGAR</p></button></div>
     </main>
 

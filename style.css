@@ -54,10 +54,22 @@ footer img {
     background-color: #DEC693;
     border-radius: 15px;
     padding: 20px;
-
     flex-direction: column;
     justify-content: flex-start;
-    margin: 20px
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-width: 245px;
+    min-height: 340px;
+}
+.card-sucursales {
+    font-family: "Figtree", sans-serif;
+    background-color: #DEC693;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px;
 }
 .card h3 {
     margin: 8px;
@@ -66,13 +78,14 @@ footer img {
  display: grid;
  grid-template-columns: 33% 33% 34%;
  justify-content: space-between;
- padding-left: 10%;
- padding-right: 10%;
+ padding-left: 15%;
+ padding-right: 15%;
 }
 
 .card img {
-    width: 80%;
-    margin: auto;
+    width: 15em;
+    height: 15em;
+    place-items: center;
 }
 .titulos-paginas {
     font-family: "Italiana", sans-serif;
@@ -102,6 +115,7 @@ footer img {
 }
 .productos-elegidos img {
     border-radius: 15px;
+    width: 80%;
 }
 .lupa {
     margin-left: -33px;
@@ -178,7 +192,8 @@ footer img {
     border: unset;
     font-family: "Figtree", sans-serif;
     align-self: flex-end;
-    margin: 0px
+    margin: 0px;
+    cursor: pointer;
 }
 .sucursales {
   display: grid;

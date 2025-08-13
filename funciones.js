@@ -3,20 +3,21 @@ function buscarElemento(texto){
 }
 
 
-const productos = [
-    { 
+const productos = 
+    [
+        { 
         "nombre": "Acuarela Profesional 12 Colores",
         "categoria": "Acuarelas",
         "precio": "$12400",
         "descripcion": "Set de acuarelas de alta calidad, colores intensos.",  
-        "Image": "acuarela profesional 12 colores.jpg"
+        "imagen": "acuarela-12.jpg"
     },
     { 
         "nombre": "Acuarela Escolar 6 Colores",
         "categoria": "Acuarelas",
         "precio": "$6000",
         "descripcion": "Ideal para uso escolar, colores básicos.",  
-        "Image": "acuarela-escolar.jpg"
+        "imagen": "acuarela-escolar.jpg"
     },
     {
         "nombre": "Acuarela en Pastilla Azul",
@@ -142,44 +143,44 @@ const productos = [
         "categoria": "Papeles",
         "precio": "$9508",
         "descripcion": "Perfecto para dibujos con tiza y lápices de color.",
-        "imagen": "img/papel-canson.jpg"
+        "imagen": "papel-canson.jpg"
     },
     {
         "nombre": "Pincel Redondo Nº 2",
         "categoria": "Pinceles",
         "precio": "$400",
         "descripcion": "Ideal para detalles finos.",
-        "imagen": "img/pincel-2.jpg"
+        "imagen": "pincel-2.jpg"
     },
     {
         "nombre": "Pincel Plano Nº 6",
         "categoria": "Pinceles",
         "precio": "$4500",
         "descripcion": "Para trazos anchos y rellenos.",
-        "imagen": "img/pincel-6.jpg"
+        "imagen": "pincel-6.jpg"
     },
     {
         "nombre": "Set 5 Pinceles",
         "categoria": "Pinceles",
         "precio": "$8200",
         "descripcion": "Variedad de formas para técnicas mixtas.",
-        "imagen": "img/set-pinceles.jpg"
+        "imagen": "set-pinceles.jpg"
     },
     {
         "nombre": "Pincel Abanico Nº 4",
         "categoria": "Pinceles",
         "precio": "$6500",
         "descripcion": "Efectos de difuminado.",
-        "imagen": "img/abanico.jpg"
+        "imagen": "abanico.jpg"
     },
     {
         "nombre": "Brocha Ancha 3 pulgadas",
         "categoria": "Pinceles",
         "precio": "$9050",
         "descripcion": "Ideal para fondos y bases.",
-        "imagen": "img/brocha-3.jpg"
+        "imagen": "brocha-3.jpg"
     }
-];
+    ];
 function mostrarProductos(){
     let contenido= "";
     let titulo= ""; 
@@ -188,20 +189,68 @@ function mostrarProductos(){
             titulo=producto.categoria;
             contenido+=`<h2 class= "titulos-productos">${titulo}</h2><section class="catalogo">`;
         }
-        contenido+=`<div class="card"> 
-                <a href="detalle producto.html"><img src="imagenes/${producto.imagen}" alt="${producto.nombre}"></a>
+        contenido+=`<div  id="${id}" class="card">
+                <div onclick= "mostrarDetalle(${id})"> <a href="detalle-producto.html"><img src="imagenes/${producto.imagen}" alt="${producto.nombre}"></a></div>
                     <h3>${producto.nombre}</h3> 
                     <h3>${producto.precio}</h3>
-                <button class="boton-agregar" type="button"><h3>Agregar al carrito</h3></button>
+                    <h3><button class="boton-agregar" type="button" onclick= "agregarProd(${id})">Agregar al carrito</button></h3>
             </div>`
 console.log(productos[id+1]?.categoria)
             if(titulo !=productos[id+1]?.categoria) {
             contenido+=`</section>`; 
         }
-    });
+    })
     document.getElementById("listado-productos").innerHTML=contenido
 }
 
+const carrito = localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : [];
 
+function agregarProd(idProd){
+    console.log(idProd);
+    carrito.push(productos[idProd]);
+    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+function mostrarCarrito() {
+    const car= localStorage.getItem("carrito");
+    console.log(`El carrito es: ${car}`);
+    let contenido = "";
+    JSON.parse(car).forEach((elemento) =>{
+    contenido +=`<div>
+            <div class="productos-elegidos"> 
+                <div><img src="imagenes/${elemento.imagen}" alt="${elemento.nombre}"></div>
+                <div> <h3>${elemento.nombre}</h3><h3>${elemento.precio}</h3>
+            </div>
+        </div>`
+    });
 
+    document.getElementById("listado-carrito").innerHTML=contenido;
+}
 
+function mostrarDetalle(idProd){
+    localStorage.setItem("detalle", idProd);
+}
+function cargarDetalle(idProd) {
+    const id= localStorage.getItem("detalle")
+     const elemento= productos[id];
+     let contenido= `
+     <h1 class="titulos">${elemento.categoria}</h1>
+    <div class="producto-detalle">
+        <div><img src="imagenes/${elemento.imagen}" alt="${elemento.nombre}"></div>
+        <div class="texto-detalle">
+            <h3>${elemento.nombre}</h3>
+            <h3>${elemento.precio}</h3>
+            <p>${elemento.descripcion}</p>
+            <h3><button class="boton-agregar" type="button" onclick= "agregarProd(${id})">Agregar al carrito</button></h3>       
+        </div>
+    </div>`;
+    document.getElementById("detalle-producto").innerHTML=contenido;
+}
+function limpiarCarrito(){
+    localStorage.removeItem('carrito');
+    let contenido= `
+    <div class="producto-detalle">
+    <p>No hay productos en el carrito.</p>
+    </div>`;
+    document.getElementById("listado-carrito").innerHTML=contenido;
+}

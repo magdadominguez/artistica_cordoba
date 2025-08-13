@@ -17,8 +17,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="funciones.js"></script>
+
 </head>
-<body>
+<body onload="cargarDetalle()">
+
     <header>
         <div class="elementos-navbar">
            <div> 
@@ -29,25 +32,11 @@
             <a href="carrito.html"><img src="imagenes/carrito.svg" alt="carrito" width="45" height="45"></a>
         </div>
     </header>
+
     <main>
-        <h1 class="titulos-paginas">Nuestras Sucursales</h1>
-
-  <section class="sucursales">
-    <div class="card-sucursales">
-      <h2>Sucursal Centro</h2>
-      <p><strong>Dirección:</strong> Av. Principal 123, Ciudad</p>
-      <p><strong>Horario:</strong> Lun-Sáb 9:00 - 18:00</p>
-    </div>
-    <div class="card-sucursales">
-      <h2>Sucursal Norte</h2>
-      <p><strong>Dirección:</strong> Calle Secundaria 456, Ciudad</p>
-      <p><strong>Horario:</strong> Lun-Sáb 10:00 - 19:00</p>
-    </div>
-  </section>
-
+<section id="detalle-producto"></section>
     </main>
-
-    <footer>
+ <footer>
         <div> 
             <a href="https://wa.me/5493515060331"><img src="imagenes/whatsapp.svg" alt="home" width="45" height="45"></a>
             <a target="_blank" href="https://www.instagram.com/artisticacordoba/?hl=es"><img src="imagenes/instagram_logo_icon_173070.svg" alt="home" width="45" height="45"></a>
