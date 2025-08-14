@@ -13,17 +13,17 @@ const productos =
         "imagen": "acuarela-12.jpg"
     },
     { 
-        "nombre": "Acuarela Escolar 6 Colores",
+        "nombre": "Acuarela Escolar 6 Colores Brillantes",
         "categoria": "Acuarelas",
         "precio": "$6000",
         "descripcion": "Ideal para uso escolar, colores básicos.",  
         "imagen": "acuarela-escolar.jpg"
     },
     {
-        "nombre": "Acuarela en Pastilla Azul",
+        "nombre": "Acuarela en Tubo Azul Ultramar",
         "categoria": "Acuarelas",
         "precio": "$3500",
-        "descripcion": "Pastilla de acuarela color azul ultramar.",
+        "descripcion": "Tubo de acuarela color azul ultramar.",
         "imagen": "acuarela-azul.jpg"
     },
     {
@@ -48,10 +48,10 @@ const productos =
         "imagen": "oleo-amarillo.jpg"
     },
     {
-        "nombre": "Óleo Azul Ultramar 200ml",
+        "nombre": "Óleo Azul Claro 200ml",
         "categoria": "Óleos",
         "precio": "$2300",
-        "descripcion": "Color intenso y duradero.",
+        "descripcion": "Color profundo y duradero.",
         "imagen": "oleo-azul.jpg"
     },
     {
@@ -104,7 +104,7 @@ const productos =
         "imagen": "set-acrilico-metalico.jpg"
     },
     {
-        "nombre": "Set Acrílico 12 Colores",
+        "nombre": "Set Acrílico 12 Colores Brillantes",
         "categoria": "Acrílicos",
         "precio": "$20200",
         "descripcion": "Set de acrílicos con tonos vibrantes.",
@@ -148,7 +148,7 @@ const productos =
     {
         "nombre": "Pincel Redondo Nº 2",
         "categoria": "Pinceles",
-        "precio": "$400",
+        "precio": "$4000",
         "descripcion": "Ideal para detalles finos.",
         "imagen": "pincel-2.jpg"
     },
@@ -215,11 +215,11 @@ function mostrarCarrito() {
     const car= localStorage.getItem("carrito");
     console.log(`El carrito es: ${car}`);
     let contenido = "";
-    JSON.parse(car).forEach((elemento) =>{
+    JSON.parse(car).forEach((elemento,id) =>{
     contenido +=`<div>
             <div class="productos-elegidos"> 
                 <div><img src="imagenes/${elemento.imagen}" alt="${elemento.nombre}"></div>
-                <div> <h3>${elemento.nombre}</h3><h3>${elemento.precio}</h3>
+                <div> <h3>${elemento.nombre}</h3><h3>${elemento.precio}</h3> 
             </div>
         </div>`
     });
