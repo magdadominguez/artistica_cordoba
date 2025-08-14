@@ -193,7 +193,7 @@ function mostrarProductos(){
                 <div onclick= "mostrarDetalle(${id})"> <a href="detalle-producto.html"><img src="imagenes/${producto.imagen}" alt="${producto.nombre}"></a></div>
                     <h3>${producto.nombre}</h3> 
                     <h3>${producto.precio}</h3>
-                    <h3><button class="boton-agregar" type="button" onclick= "agregarProd(${id})">Agregar al carrito</button></h3>
+                    <button class="boton-carrito" type="button" onclick= "agregarProd(${id})"> Agregar al carrito <img src="imagenes/carrito.svg"></button>
             </div>`
 console.log(productos[id+1]?.categoria)
             if(titulo !=productos[id+1]?.categoria) {
@@ -241,7 +241,7 @@ function cargarDetalle(idProd) {
             <h3>${elemento.nombre}</h3>
             <h3>${elemento.precio}</h3>
             <p>${elemento.descripcion}</p>
-            <h3><button class="boton-agregar" type="button" onclick= "agregarProd(${id})">Agregar al carrito</button></h3>       
+            <button class="boton-carrito2" type="button" onclick= "agregarProd(${id})"> Agregar al carrito <img src="imagenes/carrito.svg"></button>
         </div>
     </div>`;
     document.getElementById("detalle-producto").innerHTML=contenido;

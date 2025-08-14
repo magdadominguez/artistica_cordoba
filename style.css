@@ -188,12 +188,13 @@ footer img {
     margin-left: 12%;
 }
 .boton-agregar{
-    background-color: unset;
     border: unset;
     font-family: "Figtree", sans-serif;
     align-self: flex-end;
     margin: 0px;
     cursor: pointer;
+    background-color: unset;
+
 }
 .sucursales {
   display: grid;
@@ -209,4 +210,37 @@ footer img {
     border: unset;
     font-family: "Figtree", sans-serif;
     margin: 0px
+}
+.boton-carrito {
+    border: unset;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: unset;
+    height: 20px;
+    font-family: "Figtree", sans-serif;
+
+}
+.boton-carrito img {
+    width: 20px;
+    height: 20px;
+}
+.boton-carrito:hover{
+    font-weight: 700;
+}
+.boton-carrito2{
+    border: unset;
+    margin-left: 80%;
+    margin-top: 47%;
+    cursor: pointer;
+    background-color: unset;
+    height: 20px;
+    font-family: "Figtree", sans-serif;
+}
+.boton-carrito2 img {
+    width: 20px;
+    height: 20px;
+}
+.boton-carrito2:hover{
+    font-weight: 700;
 }
